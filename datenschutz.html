@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung — Ecopolis Incubator Initiative</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        :root {
+            --color-bg-primary: #0a0e1a;
+            --color-bg-secondary: #0f1424;
+            --color-bg-card: #1a2038;
+            --color-text-primary: #e8eaf0;
+            --color-text-secondary: #8a92a8;
+            --color-text-muted: #5a6280;
+            --color-accent-blue: #4a7cff;
+            --color-accent-purple: #8b5cf6;
+            --color-accent-magenta: #d946ef;
+            --gradient-primary: linear-gradient(135deg, #4a7cff, #8b5cf6, #d946ef);
+            --border-subtle: 1px solid rgba(138, 146, 168, 0.1);
+            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection { background: rgba(139, 92, 246, 0.3); color: #fff; }
+        a { color: var(--color-accent-blue); text-decoration: none; transition: color var(--transition-base); }
+        a:hover { color: var(--color-accent-purple); }
+
+        .nav {
+            padding: 1.25rem 0;
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: var(--border-subtle);
+        }
+
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav__logo img { height: 36px; width: auto; }
+
+        .nav__logo-text {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--color-text-primary);
+        }
+
+        .nav__logo-text span {
+            color: var(--color-text-muted);
+            font-weight: 400;
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .nav__back {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav__back:hover { color: var(--color-text-primary); }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .legal {
+            padding: 4rem 0 6rem;
+        }
+
+        .legal__label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-accent-purple);
+            margin-bottom: 1rem;
+        }
+
+        .legal h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 2.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .legal h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .legal h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .legal p, .legal ul {
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .legal ul {
+            padding-left: 1.5rem;
+        }
+
+        .legal li {
+            margin-bottom: 0.25rem;
+        }
+
+        .legal strong {
+            color: var(--color-text-primary);
+        }
+
+        .legal-card {
+            background: var(--color-bg-card);
+            border: var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .legal-card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer {
+            padding: 3rem 0;
+            border-top: var(--border-subtle);
+        }
+
+        .footer__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer__left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer__left img { height: 28px; }
+        .footer__copy { font-size: 0.8rem; color: var(--color-text-muted); }
+
+        .footer__links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer__links a {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+
+        .footer__links a:hover { color: var(--color-text-secondary); }
+
+        @media (max-width: 768px) {
+            .legal h1 { font-size: 1.8rem; }
+            .footer__inner { flex-direction: column; text-align: center; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                <img src="images/Ecopolis_Logo.png" alt="Ecopolis Logo">
+                <div class="nav__logo-text">
+                    Ecopolis
+                    <span>Incubator Initiative</span>
+                </div>
+            </a>
+            <a href="index.html" class="nav__back">&larr; Zurück zur Startseite</a>
+        </div>
+    </nav>
+
+    <section class="legal">
+        <div class="container">
+            <div class="legal__label">// Rechtliches</div>
+            <h1>Datenschutzerklärung</h1>
+
+            <h2>1. Datenschutz auf einen Blick</h2>
+
+            <h3>Allgemeine Hinweise</h3>
+            <p>
+                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten
+                passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich
+                identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer
+                nachfolgenden Datenschutzerklärung.
+            </p>
+
+            <h3>Datenerfassung auf dieser Website</h3>
+            <p>
+                <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+                Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten
+                können Sie dem Abschnitt &bdquo;Hinweis zur verantwortlichen Stelle&ldquo; in dieser Datenschutzerklärung entnehmen.
+            </p>
+            <p>
+                <strong>Wie erfassen wir Ihre Daten?</strong><br>
+                Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen, z.&nbsp;B. durch Nutzung
+                unseres Kontaktformulars oder per E-Mail. Andere Daten werden automatisch oder nach Ihrer Einwilligung
+                beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.&nbsp;B.
+                Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
+            </p>
+            <p>
+                <strong>Wofür nutzen wir Ihre Daten?</strong><br>
+                Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere
+                Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
+            </p>
+            <p>
+                <strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong><br>
+                Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer
+                gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder
+                Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben,
+                können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter
+                bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+                Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
+            </p>
+
+            <h2>2. Hosting</h2>
+            <p>
+                Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten,
+                die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es
+                sich v.&nbsp;a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten,
+                Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
+            </p>
+            <p>
+                Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und
+                bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und
+                effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1
+                lit. f DSGVO).
+            </p>
+
+            <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+
+            <h3>Datenschutz</h3>
+            <p>
+                Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre
+                personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie
+                dieser Datenschutzerklärung.
+            </p>
+            <p>
+                Wir weisen darauf hin, dass die Datenübertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail)
+                Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht
+                möglich.
+            </p>
+
+            <h3>Hinweis zur verantwortlichen Stelle</h3>
+            <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+            <div class="legal-card">
+                <p><strong>EI2 Management GmbH</strong></p>
+                <p>Dr.-Ing. Michael Deubzer</p>
+                <p>Franz-Mayer-Str. 1</p>
+                <p>93053 Regensburg</p>
+                <p>Telefon: +49 171 357 304 6</p>
+                <p>E-Mail: michael@ei2.group</p>
+            </div>
+            <p>
+                Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen
+                über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen
+                o.&nbsp;Ä.) entscheidet.
+            </p>
+
+            <h3>Speicherdauer</h3>
+            <p>
+                Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben
+                Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein
+                berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen,
+                werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung
+                Ihrer personenbezogenen Daten haben (z.&nbsp;B. steuer- oder handelsrechtliche Aufbewahrungsfristen);
+                im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
+            </p>
+
+            <h3>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung</h3>
+            <p>
+                Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf
+                Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere
+                Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Sofern Sie in die Speicherung von Cookies
+                oder in den Zugriff auf Informationen in Ihr Endgerät (z.&nbsp;B. via Device-Fingerprinting) eingewilligt
+                haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TDDDG. Die Einwilligung
+                ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher
+                Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO.
+                Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung
+                erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf
+                Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen.
+            </p>
+
+            <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+            <p>
+                Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine
+                bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
+                Datenverarbeitung bleibt vom Widerruf unberührt.
+            </p>
+
+            <h3>Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen (Art. 21 DSGVO)</h3>
+            <p>
+                <strong>Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, haben
+                Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die
+                Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen. Die jeweilige Rechtsgrundlage,
+                auf denen eine Verarbeitung beruht, entnehmen Sie dieser Datenschutzerklärung. Wenn Sie Widerspruch
+                einlegen, werden wir Ihre betroffenen personenbezogenen Daten nicht mehr verarbeiten, es sei denn,
+                wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte
+                und Freiheiten überwiegen oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung
+                von Rechtsansprüchen (Widerspruch nach Art. 21 Abs. 1 DSGVO).</strong>
+            </p>
+
+            <h3>Beschwerderecht bei der zuständigen Aufsichtsbehörde</h3>
+            <p>
+                Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer
+                Aufsichtsbehörde zu, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres
+                Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes. Das Beschwerderecht besteht unbeschadet
+                anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+            </p>
+            <p>
+                Zuständige Aufsichtsbehörde in Bayern:
+            </p>
+            <div class="legal-card">
+                <p><strong>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</strong></p>
+                <p>Promenade 18</p>
+                <p>91522 Ansbach</p>
+                <p><a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer">www.lda.bayern.de</a></p>
+            </div>
+
+            <h3>Recht auf Datenübertragbarkeit</h3>
+            <p>
+                Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags
+                automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format
+                aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen
+                verlangen, erfolgt dies nur, soweit es technisch machbar ist.
+            </p>
+
+            <h3>Auskunft, Berichtigung und Löschung</h3>
+            <p>
+                Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche
+                Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck
+                der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu
+                weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.
+            </p>
+
+            <h3>Recht auf Einschränkung der Verarbeitung</h3>
+            <p>
+                Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+                Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht
+                in folgenden Fällen:
+            </p>
+            <ul>
+                <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+                <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen.</li>
+                <li>Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+                <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+            </ul>
+
+            <h2>4. Datenerfassung auf dieser Website</h2>
+
+            <h3>Kontaktformular</h3>
+            <p>
+                Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular
+                inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall
+                von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+            </p>
+            <p>
+                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage
+                mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen
+                erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an
+                der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer
+                Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.
+            </p>
+            <p>
+                Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung
+                auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung
+                entfällt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen
+                &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben unberührt.
+            </p>
+
+            <h3>Anfrage per E-Mail oder Telefon</h3>
+            <p>
+                Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus
+                hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei
+                uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+            </p>
+            <p>
+                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage
+                mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen
+                erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an
+                der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer
+                Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.
+            </p>
+            <p>
+                Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung
+                auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung
+                entfällt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen
+                &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben unberührt.
+            </p>
+
+            <h2>5. Server-Log-Dateien</h2>
+            <p>
+                Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien,
+                die Ihr Browser automatisch an uns übermittelt. Dies sind:
+            </p>
+            <ul>
+                <li>Browsertyp und Browserversion</li>
+                <li>Verwendetes Betriebssystem</li>
+                <li>Referrer URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>Uhrzeit der Serveranfrage</li>
+                <li>IP-Adresse</li>
+            </ul>
+            <p>
+                Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung
+                dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein
+                berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website
+                &ndash; hierzu müssen die Server-Log-Dateien erfasst werden.
+            </p>
+
+            <h2>6. Externe Dienste</h2>
+
+            <h3>Google Fonts (lokales Hosting)</h3>
+            <p>
+                Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von
+                Google bereitgestellt werden. Die Google Fonts werden über externe Server von Google geladen. Dabei
+                wird Ihre IP-Adresse an Google übermittelt.
+            </p>
+            <p>
+                Die Nutzung von Google Fonts erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber
+                hat ein berechtigtes Interesse an der einheitlichen Darstellung des Schriftbildes auf seiner Website.
+            </p>
+            <p>
+                Weitere Informationen zu Google Fonts finden Sie unter
+                <a href="https://developers.google.com/fonts/faq" target="_blank" rel="noopener noreferrer">https://developers.google.com/fonts/faq</a>
+                und in der Datenschutzerklärung von Google:
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>.
+            </p>
+
+            <h3>LinkedIn</h3>
+            <p>
+                Auf dieser Website sind Links zu unserem LinkedIn-Profil eingebunden. LinkedIn ist ein Dienst der
+                LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Irland. Beim Klick auf den Link werden
+                Sie zur LinkedIn-Website weitergeleitet; erst dann können Daten an LinkedIn übermittelt werden.
+                Weitere Informationen zum Datenschutz bei LinkedIn finden Sie unter:
+                <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/legal/privacy-policy</a>.
+            </p>
+
+            <h2>7. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+            <p>
+                Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026. Durch die Weiterentwicklung
+                unserer Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden,
+                diese Datenschutzerklärung zu ändern.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <img src="images/Ecopolis_Logo.png" alt="Ecopolis">
+                <span class="footer__copy">&copy; 2026 Ecopolis Incubator Initiative. Alle Rechte vorbehalten.</span>
+            </div>
+            <ul class="footer__links">
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="https://www.linkedin.com/in/dr-michael-deubzer/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
