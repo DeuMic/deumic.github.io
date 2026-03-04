@@ -167,7 +167,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 1.25rem 0;
+            padding: 0;
             transition: all var(--transition-base);
             background: transparent;
         }
@@ -177,7 +177,14 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: var(--border-subtle);
-            padding: 0.75rem 0;
+        }
+
+        .nav.scrolled .nav__inner {
+            height: 56px;
+        }
+
+        .nav.scrolled .nav__logo img {
+            height: 150;
         }
 
         .nav__inner {
@@ -187,6 +194,8 @@
             max-width: var(--container-max);
             margin: 0 auto;
             padding: 0 2rem;
+            height: 150px;
+            transition: height var(--transition-base);
         }
 
         .nav__logo {
@@ -196,8 +205,9 @@
         }
 
         .nav__logo img {
-            height: 36px;
+            height: 150px;
             width: auto;
+            transition: height var(--transition-base);
         }
 
 
@@ -210,7 +220,7 @@
 
         .nav__links a {
             color: var(--color-text-secondary);
-            font-size: 0.875rem;
+            font-size: 1rem;
             font-weight: 500;
             transition: color var(--transition-base);
             position: relative;
@@ -237,12 +247,12 @@
         }
 
         .nav__cta {
-            padding: 0.5rem 1.25rem;
+            padding: 0.6rem 1.5rem;
             background: var(--gradient-primary);
             color: #fff !important;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 0.875rem;
+            font-size: 1rem;
             transition: opacity var(--transition-base), transform var(--transition-base);
         }
 
@@ -1192,7 +1202,7 @@
     <nav class="nav" id="nav">
         <div class="nav__inner">
             <a href="#" class="nav__logo">
-                <img src="images/Ecopolis_Brand.png" alt="Ecopolis Incubator Initiative" style="height: 36px; width: auto;">
+                <img src="images/Ecopolis_Brand.png" alt="Ecopolis Incubator Initiative">
             </a>
 
             <ul class="nav__links" id="navLinks">
