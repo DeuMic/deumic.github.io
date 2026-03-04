@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecopolis Incubator Initiative — KI-Beratung & Inkubation</title>
-    <meta name="description" content="Ecopolis Incubator Initiative: KI-Strategieberatung, Software-Prototyping und Go-to-Market Beratung für den Mittelstand.">
+    <meta name="description" content="Ecopolis Incubator Initiative: KI-Strategieberatung, Software-Prototyping und Go-to-Market Beratung für den Mittelstand in Regensburg.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deumic.github.io/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deumic.github.io/">
+    <meta property="og:title" content="Ecopolis Incubator Initiative — KI-Beratung & Inkubation">
+    <meta property="og:description" content="KI-Strategieberatung, Software-Prototyping und Go-to-Market Beratung für den Mittelstand. Von der Idee zur intelligenten Lösung.">
+    <meta property="og:image" content="https://deumic.github.io/images/Ecopolis_Brand.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Ecopolis Incubator Initiative">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ecopolis Incubator Initiative — KI-Beratung & Inkubation">
+    <meta name="twitter:description" content="KI-Strategieberatung, Software-Prototyping und Go-to-Market Beratung für den Mittelstand. Von der Idee zur intelligenten Lösung.">
+    <meta name="twitter:image" content="https://deumic.github.io/images/Ecopolis_Brand.png">
+
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         /* ========================================
@@ -1182,6 +1200,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ecopolis Incubator Initiative",
+        "url": "https://deumic.github.io/",
+        "logo": "https://deumic.github.io/images/Ecopolis_Brand.png",
+        "description": "KI-Strategieberatung, Software-Prototyping und Go-to-Market Beratung für den Mittelstand.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Franz-Mayer-Str. 1",
+            "postalCode": "93053",
+            "addressLocality": "Regensburg",
+            "addressCountry": "DE"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/dr-michael-deubzer/"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: Services -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Ecopolis Incubator Initiative",
+        "url": "https://deumic.github.io/",
+        "description": "KI-Strategieberatung, Software-Prototyping und Go-to-Market Beratung für den Mittelstand in Regensburg.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Deutschland"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Dienstleistungen",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "KI-Strategieberatung",
+                        "description": "Analyse Ihrer Geschäftsprozesse und Identifikation von KI-Potenzialen für messbaren Mehrwert."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Software-Prototyping",
+                        "description": "Vom Konzept zum funktionalen Prototyp mit modernsten KI-Frameworks und agilen Methoden."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Go-to-Market Beratung",
+                        "description": "Strategische Positionierung und Markteinführung Ihrer KI-gestützten Produkte und Services."
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
 
@@ -1189,9 +1274,9 @@
     <div class="bg-grid"></div>
 
     <!-- ===== NAVIGATION ===== -->
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
         <div class="nav__inner">
-            <a href="#" class="nav__logo">
+            <a href="/" class="nav__logo" title="Ecopolis Incubator Initiative — Startseite">
                 <img src="images/Ecopolis_Brand.png" alt="Ecopolis Incubator Initiative">
             </a>
 
@@ -1209,6 +1294,7 @@
         </div>
     </nav>
 
+    <main>
     <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="hero__glow"></div>
@@ -1600,6 +1686,7 @@
         </div>
     </section>
 
+    </main>
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
