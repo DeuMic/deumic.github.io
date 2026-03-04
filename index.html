@@ -179,6 +179,14 @@
             border-bottom: var(--border-subtle);
         }
 
+        .nav.scrolled .nav__inner {
+            height: 56px;
+        }
+
+        .nav.scrolled .nav__logo img {
+            height: 44px;
+        }
+
         .nav__inner {
             display: flex;
             align-items: center;
@@ -187,6 +195,7 @@
             margin: 0 auto;
             padding: 0 2rem;
             height: 150px;
+            transition: height var(--transition-base);
         }
 
         .nav__logo {
@@ -198,6 +207,7 @@
         .nav__logo img {
             height: 150px;
             width: auto;
+            transition: height var(--transition-base);
         }
 
 
