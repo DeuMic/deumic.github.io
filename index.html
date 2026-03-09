@@ -1880,31 +1880,47 @@
             wrapper.appendChild(iframe);
         }
 
-        // Form handling (placeholder)
-        function handleSubmit(e) {
+        // Contact form — Web3Forms
+        const WEB3FORMS_KEY = '33c7c809-d18f-4c59-b961-35a78bc024b8';
+
+        async function handleSubmit(e) {
             e.preventDefault();
             const form = e.target;
-            const name = form.querySelector('#name').value;
-            const company = form.querySelector('#company').value;
-            const email = form.querySelector('#email').value;
+            const btn = form.querySelector('.btn--submit');
             const interest = form.querySelector('#interest');
-            const interestText = interest.options[interest.selectedIndex]?.text || '';
-            const message = form.querySelector('#message').value;
+            const interestText = interest.options[interest.selectedIndex]?.text || '–';
 
-            const subject = encodeURIComponent('Kontaktanfrage von ' + name + (company ? ' (' + company + ')' : ''));
-            const body = encodeURIComponent(
-                'Name: ' + name + '\n' +
-                'Unternehmen: ' + (company || '–') + '\n' +
-                'E-Mail: ' + email + '\n' +
-                'Interesse an: ' + (interestText || '–') + '\n\n' +
-                'Nachricht:\n' + (message || '–')
-            );
+            btn.disabled = true;
+            btn.innerHTML = 'Wird gesendet&hellip;';
 
-            window.location.href = 'mailto:michael@ei2.group?subject=' + subject + '&body=' + body;
+            const payload = {
+                access_key: WEB3FORMS_KEY,
+                subject: 'Kontaktanfrage: ' + form.querySelector('#name').value,
+                from_name: 'Ecopolis Website',
+                name: form.querySelector('#name').value,
+                email: form.querySelector('#email').value,
+                unternehmen: form.querySelector('#company').value || '–',
+                interesse: interestText,
+                nachricht: form.querySelector('#message').value || '–',
+            };
 
-            setTimeout(() => {
-                window.location.href = 'danke.html';
-            }, 500);
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+                const data = await res.json();
+                if (data.success) {
+                    window.location.href = 'danke.html';
+                } else {
+                    throw new Error(data.message);
+                }
+            } catch (err) {
+                btn.disabled = false;
+                btn.innerHTML = 'Nachricht senden <span class="btn__arrow">&rarr;</span>';
+                alert('Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an michael@ei2.group');
+            }
         }
     </script>
 </body>
