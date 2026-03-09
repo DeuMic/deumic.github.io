@@ -11,7 +11,7 @@
   'use strict';
 
   var CONSENT_KEY = 'ei2_cookie_consent';
-  var GA_ID       = 'DEIN_GA4_ID_HIER';
+  var GA_ID       = 'G-RT3YCPPLB9';
   var CLARITY_ID  = 'DEIN_CLARITY_ID_HIER';
 
   /* ── Consent-Speicher ──────────────────────────────────────────────── */
