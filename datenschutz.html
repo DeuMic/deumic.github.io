@@ -212,9 +212,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics (cookie-frei, keine Einwilligung nötig) -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "DEIN_CF_TOKEN_HIER"}'></script>
     <!-- End Cloudflare Web Analytics -->
+    <!-- Cookie Consent + Google Analytics + Microsoft Clarity -->
+    <script defer src="js/cookie-consent.js"></script>
 </head>
 <body>
 
@@ -469,7 +471,44 @@
                 &ndash; hierzu müssen die Server-Log-Dateien erfasst werden.
             </p>
 
-            <h2>6. Externe Dienste</h2>
+            <h2>6. Cookies</h2>
+
+            <h3>Was sind Cookies?</h3>
+            <p>
+                Cookies sind kleine Textdateien, die Ihr Browser auf Ihrem Endgerät speichert. Sie ermöglichen es,
+                bestimmte Einstellungen und Informationen zwischen Seitenaufrufen zu erhalten. Diese Website verwendet
+                ausschließlich Cookies, die für den Betrieb technisch notwendig sind oder für die Sie Ihre ausdrückliche
+                Einwilligung erteilt haben.
+            </p>
+
+            <h3>Cookie-Einwilligung und Widerruf</h3>
+            <p>
+                Beim ersten Besuch dieser Website wird Ihnen ein Cookie-Banner angezeigt. Sie können dort entscheiden,
+                ob Sie der Nutzung von Analyse-Cookies durch Google Analytics und Microsoft Clarity zustimmen oder
+                diese ablehnen. Ihre Entscheidung wird im lokalen Speicher Ihres Browsers gespeichert.
+            </p>
+            <p>
+                Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Klicken Sie dazu auf
+                die folgende Schaltfläche &ndash; die Seite wird anschließend neu geladen und der Cookie-Banner
+                erscheint erneut:
+            </p>
+            <p style="margin-top:0.75rem;">
+                <button onclick="window.ei2CookieConsent && window.ei2CookieConsent.reset()"
+                    style="padding:0.5rem 1.25rem;border-radius:0.375rem;font-size:0.85rem;font-weight:500;
+                           cursor:pointer;background:transparent;color:#8a92a8;
+                           border:1px solid rgba(138,146,168,0.35);font-family:inherit;
+                           transition:color 0.2s,border-color 0.2s;"
+                    onmouseover="this.style.color='#e8eaf0';this.style.borderColor='rgba(138,146,168,0.65)'"
+                    onmouseout="this.style.color='#8a92a8';this.style.borderColor='rgba(138,146,168,0.35)'">
+                    Cookie-Einwilligung zurücksetzen
+                </button>
+            </p>
+            <p style="margin-top:0.5rem;font-size:0.82rem;color:#5a6280;">
+                Alternativ können Sie Cookies auch direkt in den Einstellungen Ihres Browsers löschen oder
+                sperren.
+            </p>
+
+            <h2>7. Externe Dienste</h2>
 
             <h3>Google Fonts (lokales Hosting)</h3>
             <p>
@@ -497,6 +536,62 @@
                 <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/legal/privacy-policy</a>.
             </p>
 
+            <h3>Google Analytics (GA4)</h3>
+            <p>
+                Diese Website verwendet Google Analytics 4 (GA4), einen Webanalysedienst der Google LLC,
+                1600 Amphitheatre Parkway, Mountain View, CA 94043, USA (innerhalb der EU verantwortlich:
+                Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Google Analytics
+                verwendet Cookies, um die Nutzung der Website zu analysieren.
+            </p>
+            <p>
+                Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich
+                Ihrer gekürzten IP-Adresse) werden in der Regel an einen Server von Google in den USA übertragen
+                und dort gespeichert. Wir haben die IP-Anonymisierung aktiviert, sodass Ihre IP-Adresse innerhalb
+                der EU gekürzt wird, bevor sie übermittelt wird.
+            </p>
+            <p>
+                Google Analytics erfasst u.&nbsp;a.: Seitenaufrufe, Sitzungsdauer, Absprungrate,
+                Herkunftsland, Gerät und Browser. Die erhobenen Daten werden in aggregierter Form ausgewertet,
+                um die Website zu verbessern.
+            </p>
+            <p>
+                Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung gemäß Art.&nbsp;6 Abs.&nbsp;1
+                lit.&nbsp;a DSGVO. Die Übertragung in die USA erfolgt auf Grundlage der
+                EU-Standardvertragsklauseln (Art.&nbsp;46 Abs.&nbsp;2 lit.&nbsp;c DSGVO). Sie können Ihre
+                Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (siehe Abschnitt 6).
+            </p>
+            <p>
+                Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank"
+                rel="noopener noreferrer">https://policies.google.com/privacy</a><br>
+                Google Analytics Opt-out Add-on:
+                <a href="https://tools.google.com/dlpage/gaoptout" target="_blank"
+                rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout</a>.
+            </p>
+
+            <h3>Microsoft Clarity</h3>
+            <p>
+                Diese Website verwendet Microsoft Clarity, einen Analysedienst der Microsoft Corporation,
+                One Microsoft Way, Redmond, WA 98052, USA. Microsoft Clarity zeichnet das Nutzerverhalten
+                auf der Website auf (Heatmaps, Sitzungsaufzeichnungen, Klick- und Scroll-Verhalten),
+                um Usability-Probleme zu erkennen und die Website zu verbessern.
+            </p>
+            <p>
+                Dabei werden Cookies gesetzt und Daten an Microsoft-Server in den USA übertragen. Clarity
+                maskiert standardmäßig Eingabefelder (z.&nbsp;B. Kontaktformulare), sodass keine Passwörter
+                oder andere vertrauliche Eingaben aufgezeichnet werden.
+            </p>
+            <p>
+                Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung gemäß Art.&nbsp;6 Abs.&nbsp;1
+                lit.&nbsp;a DSGVO. Die Übertragung in die USA erfolgt auf Grundlage der
+                EU-Standardvertragsklauseln. Sie können Ihre Einwilligung jederzeit mit Wirkung für die
+                Zukunft widerrufen (siehe Abschnitt 6).
+            </p>
+            <p>
+                Weitere Informationen:
+                <a href="https://privacy.microsoft.com/de-de/privacystatement" target="_blank"
+                rel="noopener noreferrer">https://privacy.microsoft.com/de-de/privacystatement</a>.
+            </p>
+
             <h3>Cloudflare Web Analytics</h3>
             <p>
                 Diese Website verwendet Cloudflare Web Analytics, einen Webanalysedienst der Cloudflare, Inc.,
@@ -519,7 +614,7 @@
                 <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.cloudflare.com/privacypolicy/</a>.
             </p>
 
-            <h2>7. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+            <h2>8. Aktualität und Änderung dieser Datenschutzerklärung</h2>
             <p>
                 Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026. Durch die Weiterentwicklung
                 unserer Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden,
