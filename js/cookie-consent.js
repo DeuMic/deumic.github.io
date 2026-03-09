@@ -12,7 +12,7 @@
 
   var CONSENT_KEY = 'ei2_cookie_consent';
   var GA_ID       = 'G-RT3YCPPLB9';
-  var CLARITY_ID  = 'DEIN_CLARITY_ID_HIER';
+  var CLARITY_ID  = 'vtaczui2r1';
 
   /* ── Consent-Speicher ──────────────────────────────────────────────── */
   function getConsent() {
