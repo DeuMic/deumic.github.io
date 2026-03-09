@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachricht gesendet — Ecopolis Incubator Initiative</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.ei2.group/danke.html">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        :root {
+            --color-bg-primary: #0a0e1a;
+            --color-bg-secondary: #0f1424;
+            --color-bg-card: #1a2038;
+            --color-text-primary: #e8eaf0;
+            --color-text-secondary: #8a92a8;
+            --color-text-muted: #5a6280;
+            --color-accent-blue: #4a7cff;
+            --color-accent-purple: #8b5cf6;
+            --color-accent-magenta: #d946ef;
+            --gradient-primary: linear-gradient(135deg, #4a7cff, #8b5cf6, #d946ef);
+            --border-subtle: 1px solid rgba(138, 146, 168, 0.1);
+            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        ::selection { background: rgba(139, 92, 246, 0.3); color: #fff; }
+        a { color: var(--color-accent-blue); text-decoration: none; transition: color var(--transition-base); }
+        a:hover { color: var(--color-accent-purple); }
+
+        /* NAV */
+        .nav {
+            padding: 1.25rem 0;
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: var(--border-subtle);
+        }
+
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav__logo img { height: 36px; width: auto; }
+
+        .nav__logo-text {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--color-text-primary);
+        }
+
+        .nav__logo-text span {
+            color: var(--color-text-muted);
+            font-weight: 400;
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .nav__back {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav__back:hover { color: var(--color-text-primary); }
+
+        /* MAIN */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .confirmation {
+            text-align: center;
+            max-width: 560px;
+        }
+
+        .confirmation__icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(74,124,255,0.15), rgba(139,92,246,0.15));
+            border: var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+        }
+
+        .confirmation__icon svg {
+            color: var(--color-accent-purple);
+        }
+
+        @keyframes pop {
+            from { transform: scale(0.6); opacity: 0; }
+            to   { transform: scale(1);   opacity: 1; }
+        }
+
+        .confirmation__label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-accent-purple);
+            margin-bottom: 1rem;
+        }
+
+        .confirmation__headline {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .confirmation__text {
+            color: var(--color-text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .confirmation__actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn--primary {
+            background: var(--gradient-primary);
+            color: #fff;
+        }
+
+        .btn--primary:hover {
+            opacity: 0.85;
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn--ghost {
+            background: transparent;
+            color: var(--color-text-secondary);
+            border: var(--border-subtle);
+        }
+
+        .btn--ghost:hover {
+            color: var(--color-text-primary);
+            border-color: rgba(138, 146, 168, 0.3);
+        }
+
+        /* COUNTDOWN */
+        .confirmation__countdown {
+            margin-top: 2rem;
+            font-size: 0.82rem;
+            color: var(--color-text-muted);
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 3rem 0;
+            border-top: var(--border-subtle);
+        }
+
+        .footer__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer__left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer__left img { height: 28px; }
+        .footer__copy { font-size: 0.8rem; color: var(--color-text-muted); }
+
+        .footer__links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer__links a {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+
+        .footer__links a:hover { color: var(--color-text-secondary); }
+
+        @media (max-width: 480px) {
+            .footer__inner { flex-direction: column; text-align: center; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "DEIN_CF_TOKEN_HIER"}'></script>
+    <script defer src="js/cookie-consent.js"></script>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                <img src="images/Ecopolis_Logo.png" alt="Ecopolis Logo">
+                <div class="nav__logo-text">
+                    Ecopolis
+                    <span>Incubator Initiative</span>
+                </div>
+            </a>
+            <a href="index.html" class="nav__back">&larr; Zurück zur Startseite</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="confirmation">
+            <div class="confirmation__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+            </div>
+            <div class="confirmation__label">// Nachricht gesendet</div>
+            <h1 class="confirmation__headline">Vielen Dank!</h1>
+            <p class="confirmation__text">
+                Ihre Nachricht ist auf dem Weg. Wir melden uns in der Regel innerhalb von 1–2 Werktagen bei Ihnen &mdash; persönlich und ohne Umwege.
+            </p>
+            <div class="confirmation__actions">
+                <a href="index.html" class="btn btn--primary">
+                    Zurück zur Startseite &rarr;
+                </a>
+                <a href="index.html#leistungen" class="btn btn--ghost">
+                    Leistungen entdecken
+                </a>
+            </div>
+            <p class="confirmation__countdown" id="countdown">
+                Weiterleitung in <strong id="countNum">10</strong> Sekunden&hellip;
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <img src="images/Ecopolis_Logo.png" alt="Ecopolis">
+                <span class="footer__copy">&copy; 2026 EI2 Management GmbH | Ecopolis Incubator Initiative. Alle Rechte vorbehalten.</span>
+            </div>
+            <ul class="footer__links">
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="https://www.linkedin.com/in/dr-michael-deubzer/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        let remaining = 10;
+        const num = document.getElementById('countNum');
+        const tick = setInterval(() => {
+            remaining--;
+            num.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(tick);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>

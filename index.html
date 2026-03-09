@@ -1902,14 +1902,9 @@
 
             window.location.href = 'mailto:michael@ei2.group?subject=' + subject + '&body=' + body;
 
-            const btn = form.querySelector('.btn--submit');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'E-Mail-Programm geöffnet &#10003;';
-            btn.style.background = 'linear-gradient(135deg, #10b981, #4a7cff)';
             setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-            }, 4000);
+                window.location.href = 'danke.html';
+            }, 500);
         }
     </script>
 </body>
